@@ -1,7 +1,10 @@
 import { Router } from "express";
-import { geta } from "../controllers/conroller.js";
+import { getall ,getall,deletUser, addUser} from "../dal.js";
 const router = Router() 
 
-router.get("/",geta)
+router.get("/",getall);
+router.post("/",addUser);
+router.delete("/",deletUser);
+
 
 export default router;
